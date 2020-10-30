@@ -49,7 +49,7 @@ const refs = {
 
 new CountdownTimer({
     selector: '#timer-1',
-    targetDate: new Date('Jul 17, 2019'),
+    targetDate: new Date('Nov 30, 2020'),
   });
 
 
