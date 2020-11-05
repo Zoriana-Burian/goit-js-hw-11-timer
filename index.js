@@ -10,18 +10,24 @@ const refs = {
      this.selector = selector;
      this.targetDate = targetDate;
      this.intervalId = null;
+     this.clock();
      this.start();
    }
     start (){
       this.intervalId = setInterval(() => {
+    
+        this.clock();
+  }, 1000);
+}
+
+  clock () {
     const curentTime = Date.now();
     const deltaTime = this.targetDate - curentTime;
     const time = this.getTimeComponent(deltaTime);
-
+   
     this.updateClockFace(time);
-
-  }, 1000);
-    }
+  }
+    
    
 
    getTimeComponent(time) {
